@@ -49,7 +49,7 @@ const Payment = ({user}) => {
         setform({...form,[e.target.name]:e.target.value})
     }
     const pay = async (amount)=>{
-        const a = await initiate(amount,session?.user.name,form)
+        const a = await initiate(amount,user.username,form)
        const orderId = a.id
         var options = {
     "key": "rzp_test_SoloSHPUQrkhv5", // Enter the Key ID generated from the Dashboard
