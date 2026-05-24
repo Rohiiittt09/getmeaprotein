@@ -35,7 +35,7 @@ const handler = NextAuth({
         }
       },
       async session({ session, user, token }) {
-        await mongoose.connect(process.env.MONGODB_URI)
+        
         const dbuser = await User.findOne({ email: session.user.email });
         session.user.name = dbuser.username;
 
