@@ -31,7 +31,7 @@ export const POST = async (req)=>{
              data.razorpay_signature,"pqBvd62I4WcpNjpWn1PqYWj4");
              if(xx){
                 await payment.findOneAndUpdate({oid:data.razorpay_order_id}, {status:true})
-                return NextResponse.redirect(`https://getmeaprotein.vercel.app/${y.to_user}/?success=true`)
+                return NextResponse.redirect(`https://getmeaprotein-three.vercel.app/${y.to_user}/?success=true`)
              }
              else{
                 return NextResponse.json({message:"Invalid signature"}, {status:400})
