@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LINK from "next/link";
 
 export default function Home() {
   return (
@@ -7,9 +8,13 @@ export default function Home() {
       <h1 className=" text-[14px] md:text-3xl font-bold flex text-center  items-center">Fuel Creators with Protein <img className="w-15" src="/body1.gif" alt="" /></h1>
       <p className="sm:text-[16px] text-[10px] text-center font-semibold  ">Support your favorite creators by contributing to their daily protein goals.</p>
       <div className=" flex gap-5">
-        <button type="button" className="text-white text-[12px] sm:text-[18px] bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-sm px-4 py-2.5 sm:w-40 w-fit  text-center leading-5">Start here</button>
-        <button type="button" className="text-white text-[12px] sm:text-[18px] bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-sm px-4 py-2.5 sm:w-40 w-fit  text-center leading-5">Read more</button>
-
+       <LINK href="/login">
+          <button type="button" className="text-white text-[12px] sm:text-[18px] bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-sm px-4 py-2.5 sm:w-40 w-fit  text-center leading-5">Start here</button>
+        </LINK>
+        
+          <LINK href="/dashboard">
+            <button type="button" className="text-white text-[12px] sm:text-[18px] bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-sm px-4 py-2.5 sm:w-40 w-fit  text-center leading-5">Dashboard</button>
+          </LINK>
         </div></div>
 
         <div className=" w-screen flex flex-col justify-center items-center pt-10">
